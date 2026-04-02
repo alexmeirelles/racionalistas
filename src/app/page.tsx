@@ -33,7 +33,7 @@ export default function Home() {
     <div className="manifesto-text">
       A maioria das pessoas decide no piloto automático. Escolhem por impulso. Justificam depois. Chamam isso de intuição.
       <span className="dim">Nós não.</span>
-      Nós sabemos que intuição é pattern matching. Funciona quando os padrões são familiares. <strong>Falha em tudo que realmente importa.</strong>
+      Nós sabemos que a intuição é apenas reconhecimento de padrões. Funciona quando os padrões são familiares. <strong>Falha em tudo que realmente importa.</strong>
       <span className="dim">Racionalista não é quem pensa mais. É quem estrutura o pensamento antes de agir.</span>
       Não é frieza. É disciplina.<br />
       Não é lentidão. É precisão.<br />
