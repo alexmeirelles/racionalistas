@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ParticleBG } from "../components/ParticleBG";
 
 export const metadata: Metadata = {
   title: "Racionalistas — Para quem recusa decidir no piloto automático",
@@ -16,7 +17,12 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        <ParticleBG particleColor="200,169,126" />
+        <div style={{ position: "relative", zIndex: 10 }}>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
