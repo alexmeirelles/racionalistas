@@ -12,10 +12,10 @@ ide:
   configs:
     vscode: false
     codex: true
-    gemini: false
+    gemini: true
     cursor: false
     github-copilot: false
-    antigravity: false
+    antigravity: true
     zed: false
     claude-desktop: false
     claude-code: true
