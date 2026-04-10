@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from "next/image";
 import iconPic from "../../icon.png";
 
-export default function WikiArticle({ params }: { params: { slug: string } }) {
-  const model = wikiContent.find(m => m.slug === params.slug);
+export default async function WikiArticle({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const model = wikiContent.find(m => m.slug === resolvedParams.slug);
 
   if (!model) {
     notFound();
@@ -64,6 +65,12 @@ export default function WikiArticle({ params }: { params: { slug: string } }) {
           <p style={{ color: "var(--off-white)", fontSize: "22px", marginBottom: "48px" }}>
             {model.definition}
           </p>
+
+          {model.detailedContent && model.detailedContent.map((paragraph, index) => (
+            <p key={index} style={{ marginBottom: "28px", textAlign: "justify" }}>
+              {paragraph}
+            </p>
+          ))}
 
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "var(--off-white)", marginBottom: "24px", paddingTop: "32px", borderTop: "1px solid var(--amber-dim)" }}>
             A Dinâmica do Problema
