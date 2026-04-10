@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import iconPic from "./icon.png";
 
 export default function Home() {
@@ -8,10 +9,12 @@ export default function Home() {
 
   {/* NAV */}
   <nav>
-    <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-      <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
-      <span>Racionalistas<span>.</span></span>
-    </div>
+    <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
+        <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
+        <span>Racionalistas<span>.</span></span>
+      </div>
+    </Link>
     <div className="nav-links">
       <a href="#manifesto" className="nav-link">Manifesto</a>
       <a href="/wiki" className="nav-link">Wiki</a>

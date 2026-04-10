@@ -15,10 +15,12 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
   return (
     <>
       <nav>
-        <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
-          <span>Racionalistas<span>.</span></span>
-        </div>
+        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
+            <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
+            <span>Racionalistas<span>.</span></span>
+          </div>
+        </Link>
         <div className="nav-links">
           <Link href="/#manifesto" className="nav-link">Manifesto</Link>
           <Link href="/wiki" className="nav-link">Wiki</Link>
