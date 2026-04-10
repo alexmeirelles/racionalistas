@@ -66,36 +66,36 @@ export default function WikiArticle({ params }: { params: { slug: string } }) {
         </aside>
 
         {/* Conteúdo Fluido */}
-        <div className="prose prose-invert prose-lg prose-slate flex-1 max-w-3xl">
+        <div className="flex-1 max-w-3xl text-slate-200">
           
-          <p className="text-slate-300 leading-relaxed font-serif text-xl first-letter:text-5xl first-letter:font-bold first-letter:text-teal-400 first-letter:mr-1 first-letter:float-left">
+          <p className="text-slate-300 leading-relaxed font-serif text-xl md:text-2xl mb-8 first-letter:text-6xl first-letter:font-bold first-letter:text-teal-400 first-letter:mr-2 first-letter:mt-1 first-letter:float-left">
             {model.definition}
           </p>
 
-          <h2 className="text-2xl font-serif text-white border-b border-slate-800 pb-2 mt-12 mb-6">
+          <h2 className="text-3xl font-serif text-white border-b border-slate-800 pb-3 mt-16 mb-8">
             A Dinâmica do Problema
           </h2>
-          <p className="text-slate-400">
-            A forma mais eficiente de instanciar o <strong className="text-slate-200 font-normal">{model.name}</strong> 
+          <p className="text-slate-300 text-lg leading-relaxed mb-6">
+            A forma mais eficiente de instanciar o <strong className="text-white font-bold">{model.name}</strong> 
             no dia a dia é submeter a sua decisão à pressão de contradição dessa linha de raciocínio. 
             Em momentos de incerteza em arquitetura de negócio ou código, provoque sua hipótese utilizando o gatilho oficial:
           </p>
 
-          <blockquote className="border-l-4 border-teal-500 bg-slate-900/50 p-6 my-8 not-italic">
-            <div className="text-xs font-mono text-teal-600 mb-2 uppercase tracking-widest">
+          <div className="border-l-4 border-teal-500 bg-slate-900/50 p-6 md:p-8 my-10 relative">
+            <div className="text-xs font-mono text-teal-500 mb-4 uppercase tracking-widest font-bold">
               Pergunta-Gatilho Operacional
             </div>
-            <p className="text-xl md:text-2xl font-serif text-slate-200 mt-0 mb-0 leading-snug">
+            <p className="text-2xl md:text-3xl font-serif text-teal-50 leading-snug">
               "{model.triggerQuestion}"
             </p>
-          </blockquote>
+          </div>
 
-          <h2 className="text-2xl font-serif text-white border-b border-slate-800 pb-2 mt-12 mb-6">
+          <h2 className="text-3xl font-serif text-white border-b border-slate-800 pb-3 mt-16 mb-8">
             Caso de Estudo Comprovado
           </h2>
-          <div className="text-slate-300 leading-relaxed pl-4 border-l border-slate-800">
-            <span className="block text-xs font-mono text-slate-500 mb-4 uppercase">Arquivo: Acesso Histórico</span>
-            <p className="m-0 bg-slate-900/30 p-4 rounded-r text-base">
+          <div className="text-slate-300 text-lg leading-relaxed pl-6 border-l-2 border-slate-700">
+            <span className="block text-xs font-mono text-slate-500 mb-4 uppercase tracking-wider">Arquivo // Acesso Histórico</span>
+            <p className="bg-slate-900/30 p-6 rounded-r-md text-slate-300 italic">
               {model.example}
             </p>
           </div>

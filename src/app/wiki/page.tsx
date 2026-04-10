@@ -19,19 +19,19 @@ export default function WikiIndex() {
         </p>
       </div>
 
-      <div className="prose prose-invert prose-lg prose-slate max-w-none">
+      <div className="max-w-none text-slate-200">
         
         <div className="bg-slate-900/40 border border-slate-800 rounded-md p-6 mb-12 flex gap-4 md:gap-8 items-start">
-          <div className="text-3xl hidden md:block opacity-50">🧭</div>
+          <div className="text-3xl hidden md:block opacity-50 mt-1">🧭</div>
           <div>
-            <h2 className="text-xl font-bold text-white mt-0 mb-2">Bem-vindo(a) ao Catálogo</h2>
-            <p className="text-base text-slate-300 mt-0 mb-0">
+            <h2 className="text-2xl font-bold text-white mt-0 mb-3 font-serif">Bem-vindo(a) ao Catálogo</h2>
+            <p className="text-lg text-slate-300 mt-0 mb-0 leading-relaxed font-serif">
               A maioria das pessoas decide no piloto automático. A intuição é útil em padrões repetitivos, mas falha em ambientes caóticos. A proposta deste diretório é mapear, arquivar e exemplificar os Modelos Mentais mais robustos documentados pela humanidade. Utilize o índice ao lado para navegar por cada estrutura de pensamento.
             </p>
           </div>
         </div>
 
-        <h2 className="text-2xl font-serif text-teal-400 border-b border-slate-800 pb-2 mb-6">
+        <h2 className="text-3xl font-serif text-teal-400 border-b border-slate-800 pb-3 mb-8 mt-12">
           Índice Alfabético Geral
         </h2>
         

@@ -20,17 +20,6 @@ export default function WikiLayout({ children }: { children: React.ReactNode }) 
           <div className="text-xs font-mono text-teal-600/70 mt-1 mb-4 uppercase tracking-widest">
             A Enciclopédia
           </div>
-          
-          <div className="relative group">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 absolute left-3 top-2.5 text-slate-500 group-focus-within:text-teal-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input 
-              type="text" 
-              placeholder="Pesquisar modelo..." 
-              className="w-full bg-slate-900/50 border border-slate-800 rounded-md py-2 pl-9 pr-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-teal-500/50 focus:bg-slate-900 transition-all font-mono"
-            />
-          </div>
         </div>
 
         <div className="p-4 pt-6 flex-1">
