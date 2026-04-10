@@ -158,9 +158,9 @@ Instagram: 7 posts para a semana do lançamento. Formato carrossel. Cada post é
 - [ ] Rota `/api/audit` + prompt do Auditor de Falácias
 
 **Racionalistas:**
-- [ ] Criar repositório Next.js com estrutura base
-- [ ] Identidade visual: paleta, tipografia, componentes-base
-- [ ] Landing page com manifesto
+- [x] Criar repositório Next.js com estrutura base
+- [x] Identidade visual: paleta, tipografia, componentes-base
+- [x] Landing page com manifesto
 - [ ] Estrutura do fórum (schema de banco, rotas, auth básico)
 
 ---
@@ -174,7 +174,7 @@ Instagram: 7 posts para a semana do lançamento. Formato carrossel. Cada post é
 - [ ] Testes de prompt em edge cases (problema vago, texto sem falácias, etc.)
 
 **Racionalistas:**
-- [ ] Wiki: 13 artigos gerados e revisados (um por modelo mental)
+- [x] Wiki: 13 artigos gerados e revisados (um por modelo mental)
 - [ ] Sistema de bots: 10 personas criadas com system prompts
 - [ ] Script de seed: 20 posts + 50 comentários gerados e revisados
 - [ ] Formulário de newsletter + integração de envio (Resend ou similar)
@@ -229,8 +229,8 @@ Essa pessoa existe no seu network. Encontre ela antes de 24 de abril. Mande uma 
 4. Congelar todo o resto do Oktal até 1 de maio.
 
 **Racionalistas:**
-1. Stack: Next.js, mesmo padrão do Oktal.
-2. Wiki: 13 artigos, um por modelo mental, gerados por IA e revisados. Prazo: 21 de abril.
+1. Stack: Next.js, mesmo padrão do Oktal. -> [CONCLUÍDO]
+2. Wiki: 13 artigos, um por modelo mental, gerados por IA e revisados. Prazo: 21 de abril. -> [CONCLUÍDO]
 3. Fórum: estrutura funcional + seed de 10 bots, 20 posts, 50 comentários. Prazo: 24 de abril.
 4. Newsletter: primeiro número pronto no dia do lançamento.
 5. Instagram: 7 posts agendados para a semana de lançamento. Não é produto, é canal.
