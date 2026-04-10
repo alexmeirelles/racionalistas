@@ -33,7 +33,7 @@ export default function WikiLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
 
-        <nav className="p-4 pt-6 flex-1">
+        <div className="p-4 pt-6 flex-1">
           <h3 className="text-xs font-mono text-slate-500 uppercase tracking-widest pl-2 mb-3">
             Conteúdos
           </h3>
@@ -50,14 +50,14 @@ export default function WikiLayout({ children }: { children: React.ReactNode }) 
               </li>
             ))}
           </ul>
-        </nav>
+        </div>
       </aside>
 
       {/* Área Principal (Topbar + Conteúdo) */}
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 bg-black">
         
         {/* Topbar Mobile */}
-        <header className="md:hidden flex items-center justify-between p-4 border-b border-slate-900 bg-black/80 backdrop-blur-md sticky top-0 z-20">
+        <div className="md:hidden flex items-center justify-between p-4 border-b border-slate-900 bg-black/80 backdrop-blur-md sticky top-0 z-20">
           <Link href="/" className="text-lg font-serif text-white flex items-center gap-2">
             Racionalistas.
           </Link>
@@ -66,17 +66,16 @@ export default function WikiLayout({ children }: { children: React.ReactNode }) 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-        </header>
+        </div>
 
         {/* Topbar Desktop (Opcional, apenas status) */}
-        <header className="hidden md:flex items-center justify-end p-4 h-16 w-full absolute top-0 right-0 z-10 pointer-events-none">
+        <div className="hidden md:flex items-center justify-end p-4 h-16 w-full absolute top-0 right-0 z-10 pointer-events-none">
           <div className="flex items-center gap-6 text-sm font-mono text-slate-500 pointer-events-auto">
             <Link href="/" className="hover:text-white transition-colors">Ler Manifesto</Link>
-            <Link href="#assinar" className="hover:text-white transition-colors">Assinar Newsletter</Link>
           </div>
-        </header>
+        </div>
 
-        <main className="flex-1 p-6 md:p-12 lg:p-16 max-w-5xl mx-auto w-full pt-16 md:pt-24">
+        <main className="flex-1 p-6 md:p-12 lg:p-16 max-w-4xl mx-auto w-full pt-16 md:pt-24 bg-black">
           {children}
         </main>
       </div>

@@ -10,14 +10,14 @@ export const metadata = {
 export default function WikiIndex() {
   return (
     <>
-      <header className="mb-12 border-b border-slate-900 pb-8">
+      <div className="mb-12 border-b border-slate-900 pb-8">
         <h1 className="text-4xl md:text-5xl font-serif text-white mb-4 tracking-tight">
           A Enciclopédia Racionalista
         </h1>
-        <p className="text-xl text-slate-400 max-w-2xl font-serif italic">
+        <p className="text-xl text-slate-400 max-w-2xl font-serif italic m-0">
           O portal colaborativo (e fechado) de infraestrutura cognitiva.
         </p>
-      </header>
+      </div>
 
       <div className="prose prose-invert prose-lg prose-slate max-w-none">
         
@@ -35,24 +35,23 @@ export default function WikiIndex() {
           Índice Alfabético Geral
         </h2>
         
-        {/* Usando colunas nativas de CSS para simular índice da wikipedia */}
-        <div className="columns-1 md:columns-2 gap-8 space-y-4">
+        {/* Lista simples em estilo diretório ao invés de colunas nativas problemáticas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
           {wikiContent.concat().sort((a,b) => a.name.localeCompare(b.name)).map((model) => (
-            <div key={model.id} className="break-inside-avoid">
-              <Link 
-                href={`/wiki/${model.slug}`}
-                className="group flex flex-col p-4 bg-slate-900/20 border border-slate-800 rounded hover:bg-slate-800 hover:border-slate-700 transition-colors"
-              >
-                <div className="flex justify-between items-start mb-1">
-                  <span className="font-bold text-teal-300 group-hover:text-teal-400 group-hover:underline underline-offset-4 decoration-slate-700">
-                    {model.name}
-                  </span>
-                  <span className="opacity-50" style={{ color: model.color }}>{model.icon}</span>
-                </div>
-                <p className="text-sm text-slate-400 line-clamp-2 mt-0 mb-0">
+            <div key={model.id} className="flex border-b border-slate-900 pb-4">
+              <div className="mr-4 mt-1 opacity-80 text-xl" style={{ color: model.color }}>{model.icon}</div>
+              <div className="flex-1">
+                <Link 
+                  href={`/wiki/${model.slug}`}
+                  className="inline-block font-bold text-teal-400 hover:text-teal-300 hover:underline underline-offset-4 decoration-teal-500 mb-1"
+                >
+                  {model.name}
+                </Link>
+                <div className="text-xs text-slate-500 mb-1 font-mono uppercase tracking-widest">{model.thinker}</div>
+                <p className="text-sm text-slate-400 line-clamp-2 mt-0 mb-0 leading-snug">
                   {model.definition}
                 </p>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
