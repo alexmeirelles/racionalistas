@@ -51,12 +51,6 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
             {model.name}
           </h1>
           
-          <div style={{ padding: "24px", background: "var(--gray)", borderLeft: `2px solid ${model.color}`, display: "inline-block" }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--gray-text)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "8px" }}>
-              CÓDIGO INTERNO
-            </div>
-            <div style={{ fontFamily: "var(--serif)", fontSize: "18px" }}>{model.id}</div>
-          </div>
         </div>
 
         {/* CORPO DO TEXTO */}
