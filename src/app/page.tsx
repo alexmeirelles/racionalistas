@@ -15,6 +15,7 @@ export default function Home() {
     <div className="nav-links">
       <a href="#manifesto" className="nav-link">Manifesto</a>
       <a href="/wiki" className="nav-link">Wiki</a>
+      <a href="/forum" className="nav-link">Fórum</a>
       <a href="#oktal" className="nav-link">Oktal</a>
       <a href="#assinar" className="nav-cta">Assinar grátis</a>
     </div>
