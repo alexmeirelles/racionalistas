@@ -14,7 +14,7 @@ export default function Home() {
     </div>
     <div className="nav-links">
       <a href="#manifesto" className="nav-link">Manifesto</a>
-      <a href="#modelos" className="nav-link">Modelos</a>
+      <a href="/wiki" className="nav-link">Wiki</a>
       <a href="#oktal" className="nav-link">Oktal</a>
       <a href="#assinar" className="nav-cta">Assinar grátis</a>
     </div>
