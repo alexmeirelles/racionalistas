@@ -1,108 +1,118 @@
-import React from 'react';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { wikiContent } from '@/lib/wiki-content';
-
-export function generateStaticParams() {
-  return wikiContent.map((model) => ({
-    slug: model.slug,
-  }));
-}
-
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const model = wikiContent.find((m) => m.slug === params.slug);
-  if (!model) return { title: 'Não Encontrado' };
-  
-  return {
-    title: `${model.name} | Racionalistas Wiki`,
-    description: model.definition,
-  };
-}
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import Image from "next/image";
+import iconPic from "../../icon.png";
 
 export default function WikiArticle({ params }: { params: { slug: string } }) {
-  const model = wikiContent.find((m) => m.slug === params.slug);
+  const model = wikiContent.find(m => m.slug === params.slug);
 
   if (!model) {
     notFound();
   }
 
   return (
-    <article className="relative min-h-full pb-20 max-w-full">
-      {/* Título Estilo Wikipedia (Sublinhado completo) */}
-      <header className="mb-6 border-b border-slate-800 pb-2 flex items-baseline justify-between">
-        <h1 className="text-4xl md:text-5xl font-serif text-white tracking-tight m-0">
-          {model.name}
-        </h1>
-      </header>
+    <>
+      <nav>
+        <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
+          <span>Racionalistas<span>.</span></span>
+        </div>
+        <div className="nav-links">
+          <Link href="/#manifesto" className="nav-link">Manifesto</Link>
+          <Link href="/wiki" className="nav-link">Wiki</Link>
+          <Link href="/forum" className="nav-link">Fórum</Link>
+          <Link href="/#oktal" className="nav-link">Oktal</Link>
+          <Link href="/#assinar" className="nav-cta">Assinar grátis</Link>
+        </div>
+      </nav>
 
-      <div className="flex flex-col xl:flex-row-reverse gap-8 items-start">
+      <section style={{ paddingTop: "140px", maxWidth: "900px", margin: "0 auto" }}>
         
-        {/* Infobox Direito (Wikipedia Style) */}
-        <aside className="w-full xl:w-72 flex-shrink-0 bg-slate-900/40 border border-slate-800 p-1 mb-8 xl:mb-0 xl:mt-2">
-          <div className="bg-slate-900 border border-slate-800 flex items-center justify-center py-6 text-5xl mb-1" style={{ color: model.color }}>
-            {model.icon}
-          </div>
-          <table className="w-full text-sm border-collapse text-left">
-            <tbody>
-              <tr className="border-b border-slate-800">
-                <th className="py-2 px-3 text-slate-400 font-normal w-1/3">Origem</th>
-                <td className="py-2 px-3 text-teal-400 font-medium">{model.thinker}</td>
-              </tr>
-              <tr className="border-b border-slate-800">
-                <th className="py-2 px-3 text-slate-400 font-normal">Identificador</th>
-                <td className="py-2 px-3 text-slate-200 font-mono text-xs">{model.id}</td>
-              </tr>
-              <tr>
-                <th className="py-2 px-3 text-slate-400 font-normal">Sinal</th>
-                <td className="py-2 px-3">
-                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: model.color }}></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div className="bg-teal-900/20 text-teal-400/80 text-xs text-center py-2 mt-1 border border-teal-900/50">
-            Padrão de Raciocínio
-          </div>
-        </aside>
-
-        {/* Conteúdo Fluido */}
-        <div className="flex-1 max-w-3xl text-slate-200">
+        {/* CABEÇALHO DO ARTIGO */}
+        <div style={{ marginBottom: "64px" }}>
+          <Link href="/wiki" style={{ 
+            fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.15em", 
+            textTransform: "uppercase", color: "var(--gray-text)", textDecoration: "none",
+            marginBottom: "24px", display: "inline-block" 
+          }}>
+            ← Voltar para o Catálogo
+          </Link>
           
-          <p className="text-slate-300 leading-relaxed font-serif text-xl md:text-2xl mb-8 first-letter:text-6xl first-letter:font-bold first-letter:text-teal-400 first-letter:mr-2 first-letter:mt-1 first-letter:float-left">
+          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "16px" }}>
+            <span style={{ color: model.color, fontSize: "2rem" }}>{model.icon}</span>
+            <div className="section-tag" style={{ margin: 0, color: model.color }}>{model.thinker}</div>
+          </div>
+          
+          <h1 className="section-title" style={{ maxWidth: "100%", marginBottom: "24px" }}>
+            {model.name}
+          </h1>
+          
+          <div style={{ padding: "24px", background: "var(--gray)", borderLeft: `2px solid ${model.color}`, display: "inline-block" }}>
+            <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--gray-text)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "8px" }}>
+              CÓDIGO INTERNO
+            </div>
+            <div style={{ fontFamily: "var(--serif)", fontSize: "18px" }}>{model.id}</div>
+          </div>
+        </div>
+
+        {/* CORPO DO TEXTO */}
+        <div style={{ 
+          fontSize: "18px", color: "var(--gray-text)", lineHeight: 1.8, 
+          fontFamily: "var(--serif)", paddingBottom: "48px" 
+        }}>
+          <p style={{ color: "var(--off-white)", fontSize: "22px", marginBottom: "48px" }}>
             {model.definition}
           </p>
 
-          <h2 className="text-3xl font-serif text-white border-b border-slate-800 pb-3 mt-16 mb-8">
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "var(--off-white)", marginBottom: "24px", paddingTop: "32px", borderTop: "1px solid var(--amber-dim)" }}>
             A Dinâmica do Problema
           </h2>
-          <p className="text-slate-300 text-lg leading-relaxed mb-6">
-            A forma mais eficiente de instanciar o <strong className="text-white font-bold">{model.name}</strong> 
+          <p style={{ marginBottom: "32px" }}>
+            A forma mais eficiente de instanciar o <strong style={{ color: "var(--off-white)", fontWeight: "normal" }}>{model.name}</strong> 
             no dia a dia é submeter a sua decisão à pressão de contradição dessa linha de raciocínio. 
             Em momentos de incerteza em arquitetura de negócio ou código, provoque sua hipótese utilizando o gatilho oficial:
           </p>
 
-          <div className="border-l-4 border-teal-500 bg-slate-900/50 p-6 md:p-8 my-10 relative">
-            <div className="text-xs font-mono text-teal-500 mb-4 uppercase tracking-widest font-bold">
+          <div style={{ background: "var(--gray)", padding: "48px", textAlign: "center", margin: "48px 0" }}>
+            <div style={{ 
+              fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.15em", 
+              textTransform: "uppercase", color: model.color, marginBottom: "24px" 
+            }}>
               Pergunta-Gatilho Operacional
             </div>
-            <p className="text-2xl md:text-3xl font-serif text-teal-50 leading-snug">
+            <p style={{ fontFamily: "var(--serif)", fontSize: "1.8rem", color: "var(--off-white)", margin: 0, fontStyle: "italic", lineHeight: 1.4 }}>
               "{model.triggerQuestion}"
             </p>
           </div>
 
-          <h2 className="text-3xl font-serif text-white border-b border-slate-800 pb-3 mt-16 mb-8">
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "var(--off-white)", marginBottom: "24px", paddingTop: "32px", borderTop: "1px solid var(--amber-dim)" }}>
             Caso de Estudo Comprovado
           </h2>
-          <div className="text-slate-300 text-lg leading-relaxed pl-6 border-l-2 border-slate-700">
-            <span className="block text-xs font-mono text-slate-500 mb-4 uppercase tracking-wider">Arquivo // Acesso Histórico</span>
-            <p className="bg-slate-900/30 p-6 rounded-r-md text-slate-300 italic">
+          <div style={{ paddingLeft: "32px", borderLeft: "1px solid var(--gray-mid)" }}>
+            <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--gray-text)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px" }}>
+              Arquivo // Acesso Histórico
+            </div>
+            <p style={{ margin: 0 }}>
               {model.example}
             </p>
           </div>
 
         </div>
+      </section>
 
-      </div>
-    </article>
+      <div className="divider"><hr /></div>
+
+      <footer>
+        <div className="footer-copy">© 2026 Racionalistas. Todos os direitos reservados.</div>
+        <div className="footer-tagline">Pensamento claro é infraestrutura.</div>
+      </footer>
+    </>
   );
+}
+
+export async function generateStaticParams() {
+  return wikiContent.map((item) => ({
+    slug: item.slug,
+  }));
 }

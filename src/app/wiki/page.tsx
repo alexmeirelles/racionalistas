@@ -1,62 +1,58 @@
-import React from 'react';
-import Link from 'next/link';
 import { wikiContent } from '@/lib/wiki-content';
-
-export const metadata = {
-  title: 'Wiki | Racionalistas',
-  description: 'Catálogo de Modelos Mentais Racionalistas',
-};
+import Link from 'next/link';
+import Image from "next/image";
+import iconPic from "../icon.png";
 
 export default function WikiIndex() {
+  const sortedContent = [...wikiContent].sort((a,b) => a.name.localeCompare(b.name));
+
   return (
     <>
-      <div className="mb-12 border-b border-slate-900 pb-8">
-        <h1 className="text-4xl md:text-5xl font-serif text-white mb-4 tracking-tight">
-          A Enciclopédia Racionalista
-        </h1>
-        <p className="text-xl text-slate-400 max-w-2xl font-serif italic m-0">
-          O portal colaborativo (e fechado) de infraestrutura cognitiva.
-        </p>
-      </div>
-
-      <div className="max-w-none text-slate-200">
-        
-        <div className="bg-slate-900/40 border border-slate-800 rounded-md p-6 mb-12 flex gap-4 md:gap-8 items-start">
-          <div className="text-3xl hidden md:block opacity-50 mt-1">🧭</div>
-          <div>
-            <h2 className="text-2xl font-bold text-white mt-0 mb-3 font-serif">Bem-vindo(a) ao Catálogo</h2>
-            <p className="text-lg text-slate-300 mt-0 mb-0 leading-relaxed font-serif">
-              A maioria das pessoas decide no piloto automático. A intuição é útil em padrões repetitivos, mas falha em ambientes caóticos. A proposta deste diretório é mapear, arquivar e exemplificar os Modelos Mentais mais robustos documentados pela humanidade. Utilize o índice ao lado para navegar por cada estrutura de pensamento.
-            </p>
-          </div>
+      <nav>
+        <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
+          <span>Racionalistas<span>.</span></span>
         </div>
+        <div className="nav-links">
+          <Link href="/#manifesto" className="nav-link">Manifesto</Link>
+          <Link href="/wiki" className="nav-link">Wiki</Link>
+          <Link href="/forum" className="nav-link">Fórum</Link>
+          <Link href="/#oktal" className="nav-link">Oktal</Link>
+          <Link href="/#assinar" className="nav-cta">Assinar grátis</Link>
+        </div>
+      </nav>
 
-        <h2 className="text-3xl font-serif text-teal-400 border-b border-slate-800 pb-3 mb-8 mt-12">
-          Índice Alfabético Geral
-        </h2>
-        
-        {/* Lista simples em estilo diretório ao invés de colunas nativas problemáticas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-          {wikiContent.concat().sort((a,b) => a.name.localeCompare(b.name)).map((model) => (
-            <div key={model.id} className="flex border-b border-slate-900 pb-4">
-              <div className="mr-4 mt-1 opacity-80 text-xl" style={{ color: model.color }}>{model.icon}</div>
-              <div className="flex-1">
-                <Link 
-                  href={`/wiki/${model.slug}`}
-                  className="inline-block font-bold text-teal-400 hover:text-teal-300 hover:underline underline-offset-4 decoration-teal-500 mb-1"
-                >
-                  {model.name}
-                </Link>
-                <div className="text-xs text-slate-500 mb-1 font-mono uppercase tracking-widest">{model.thinker}</div>
-                <p className="text-sm text-slate-400 line-clamp-2 mt-0 mb-0 leading-snug">
+      <section style={{ paddingTop: "140px" }}>
+        <div className="section-tag">A Enciclopédia Racionalista</div>
+        <h2 className="section-title" style={{ maxWidth: "800px" }}>O portal de infraestrutura cognitiva.</h2>
+        <p className="section-text" style={{ maxWidth: "700px" }}>
+          A maioria das pessoas decide no piloto automático. A intuição é útil em padrões repetitivos, mas falha em ambientes caóticos. A proposta deste diretório é mapear, arquivar e exemplificar os Modelos Mentais mais robustos documentados pela humanidade.
+        </p>
+
+        <div className="models-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", marginTop: "48px" }}>
+          {sortedContent.map((model) => (
+            <Link href={`/wiki/${model.slug}`} key={model.id} style={{ textDecoration: 'none' }}>
+              <div className="model-card" style={{ textAlign: "left", display: "flex", flexDirection: "column", height: "100%", padding: "32px 24px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+                  <div className="model-name" style={{ margin: 0, fontSize: "20px" }}>{model.name}</div>
+                  <div style={{ color: model.color, fontSize: "1.2rem", opacity: 0.8 }}>{model.icon}</div>
+                </div>
+                <div className="model-thinker" style={{ marginBottom: "12px" }}>{model.thinker}</div>
+                <div style={{ fontSize: "14px", color: "var(--gray-text)", lineHeight: 1.6 }}>
                   {model.definition}
-                </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
+      </section>
 
-      </div>
+      <div className="divider"><hr /></div>
+
+      <footer>
+        <div className="footer-copy">© 2026 Racionalistas. Todos os direitos reservados.</div>
+        <div className="footer-tagline">Pensamento claro é infraestrutura.</div>
+      </footer>
     </>
   );
 }
