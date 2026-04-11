@@ -19,10 +19,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Estratégia Coletiva",
     "color": "#FF6B6B",
     "icon": "↻",
-    "definition": "Pessoas agem por recompensas e evitam punições (não se importam com suas boas intenções).",
-    "detailedContent": [],
-    "triggerQuestion": "Antes de pedir algo a um cliente ou sócio, mostre primeiro e de forma clara o que ele ganha com isso.",
-    "example": "Agências sugerem campanhas caras apenas porque ganham comissão sobre o orçamento investido."
+    "definition": "Incentivos são o motor invisível do comportamento humano. Sempre que há dinheiro, status ou alívio de dor envolvidos, as pessoas ajustarão suas ações para maximizar esses ganhos, mesmo que isso contradiga o discurso oficial. Se você ignora incentivos, não entende o sistema que está gerindo.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Se você quer entender o comportamento, siga os incentivos.” – Charlie Munger*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>Incentivos são recompensas e punições que moldam escolhas, muitas vezes de forma mais poderosa que valores declarados ou intenções conscientes. Pesquisas em psicologia de julgamento e tomada de decisão mostram que, em contextos organizacionais, incentivos financeiros, reconhecimento social e medo de perder posição explicam grande parte das “decisões irracionais”. Charlie Munger chegou a chamar os incentivos de “superpotência” da psicologia, pois conseguem alterar radicalmente o comportamento de pessoas que, fora daquele contexto, seriam consideradas éticas e razoáveis.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>O ponto central é que incentivos operam tanto de forma consciente quanto inconsciente: as pessoas racionalizam depois o que já foram levadas a fazer para preservar uma autoimagem de “boa pessoa”. Quando o sistema recompensa métricas superficiais, como cliques ou horas logadas, ele cria distorções que parecem más intenções individuais, mas na verdade são o resultado lógico de estímulos mal desenhados. Por isso, em vez de culpar indivíduos isolados, o modelo mental sugere olhar primeiro para a arquitetura de incentivos do ambiente.</p>",
+      "<p>Ignorar incentivos é pedir para ser manipulado por eles; desenhá-los com consciência é uma das formas mais poderosas de dirigir comportamento em equipes, clientes e em si mesmo.</p>"
+    ],
+    "triggerQuestion": "Em qualquer decisão importante, faça duas perguntas: “Quem ganha o quê com essa escolha?” e “Que comportamento meu sistema está realmente premiando?”. Redesenhe metas, bônus e indicadores de forma que ninguém seja recompensado por ações que prejudiquem clientes, marca ou sustentabilidade financeira, mesmo que batam números de curto prazo. Em suas próprias escolhas, observe quando você está sendo levado por incentivos de curto prazo – como aprovação social instantânea – contra objetivos de longo prazo.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Um gerente de banco é premiado por volume de produtos vendidos, não por adequação ao cliente; o resultado é a oferta sistemática de serviços desnecessários ou caros.</li><li style='margin-bottom: 12px;'>Em agências, comissões baseadas apenas em verba investida empurram o time a sugerir campanhas maiores, mesmo quando o cliente não tem maturidade para convertê-las em lucro.</li><li style='margin-bottom: 12px;'>Em startups, bônus atrelados apenas a crescimento de usuários incentivam aquisição agressiva com pouca preocupação em retenção ou qualidade do produto.</li></ul>"
   },
   {
     "id": "prova-social",
@@ -31,10 +36,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Robert Cialdini",
     "color": "#4ECDC4",
     "icon": "◇",
-    "definition": "O instinto de seguir a manada quando se está na dúvida.",
-    "detailedContent": [],
-    "triggerQuestion": "Adicione um bloco de avaliações (Quem já usou) na sua oferta principal hoje.",
-    "example": "Colocar depoimentos em vídeo na landing page do seu curso de IA converte mais que prometer mundos e fundos sozinho."
+    "definition": "Prova social é a tendência de assumir que um comportamento é correto quando vemos muitas pessoas, especialmente semelhantes a nós, fazendo a mesma coisa. Ela reduz a ansiedade da escolha, mas também pode levar à adoção acrítica de modas e bolhas.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Quando as pessoas estão inseguras, elas olham para o que os outros fazem para decidir o que é certo.” – Parafraseando Cialdini*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>A prova social é um princípio clássico da psicologia social que descreve como indivíduos usam o comportamento de outros como atalho para decidir como agir, sobretudo em situações ambíguas. Estudos mostram que mensagens destacando que “a maioria das pessoas semelhantes a você já faz X” aumentam significativamente a adesão a comportamentos desejados, como conservação de energia ou reutilização de toalhas. Em mercados digitais, depoimentos, avaliações, contadores de vendas e logos de clientes funcionam como gatilhos de prova social que reduzem o risco percebido de se comprometer com uma oferta.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>A prova social funciona como heurística de economia cognitiva: em vez de analisar todas as opções do zero, o cérebro copia o comportamento de quem parece saber mais ou se parecer conosco. Esse mecanismo evolutivo, útil em ambientes incertos, torna-se perigoso quando combinado com algoritmos que amplificam apenas casos de sucesso extremos, criando a ilusão de que “todo mundo está ganhando muito rápido”. O modelo mental não pede para ignorar a prova social, mas para enxergá-la como sinal a ser calibrado, não como prova definitiva.</p>",
+      "<p>A prova social pode ser o que destrava a confiança que faltava para o cliente certo avançar – ou o que arrasta multidões para decisões que ninguém teria coragem de tomar sozinho.</p>"
+    ],
+    "triggerQuestion": "Em vendas e marketing, torne explícito “quem já confiou em você”: depoimentos em vídeo, estudos de caso segmentados, números de alunos e provas de uso real são ferramentas centrais. Ao consumir informação, questione se a percepção de que algo é comum não está sendo inflada pelo recorte do seu feed; busque dados agregados, não apenas exemplos chamativos. Em decisões importantes, pergunte: “Estou escolhendo isso porque faz sentido ou porque meu círculo está todo indo na mesma direção?”.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Um hotel aumenta a taxa de reutilização de toalhas ao informar que a maioria dos hóspedes daquele mesmo quarto já aderiu à prática.</li><li style='margin-bottom: 12px;'>Landing pages com depoimentos específicos, incluindo resultados e contexto, convertem melhor do que aquelas que apenas prometem benefícios genéricos.</li><li style='margin-bottom: 12px;'>Produtos em marketplaces sobem no ranking e convertem mais depois de acumularem grande volume de avaliações positivas, criando um ciclo de reforço.</li></ul>"
   },
   {
     "id": "reciprocidade",
@@ -43,10 +53,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Robert Cialdini",
     "color": "#F59E0B",
     "icon": "⊖",
-    "definition": "A urgência psicológica em retribuir favores recebidos.",
-    "detailedContent": [],
-    "triggerQuestion": "Resolva um problema pequeno de um prospect no WhatsApp de graça, sem pedir nada em troca.",
-    "example": "Entregar um diagnóstico gratuito e valioso de Holding Familiar antes de tentar vender a consultoria."
+    "definition": "Reciprocidade é a norma social que nos leva a devolver algo quando recebemos um benefício percebido como genuíno. É um dos gatilhos de influência mais confiáveis, mas exige cuidado ético: quando usado de forma manipulativa, gera ressentimento em vez de lealdade.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“As pessoas sentem-se obrigadas a retribuir favores, presentes e concessões.” – Robert Cialdini*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>A regra da reciprocidade está presente em praticamente todas as culturas estudadas, regulando trocas desde pequenas gentilezas até alianças políticas. Pesquisas clássicas mostram que pessoas tendem a comprar mais de quem lhes oferece pequenos presentes ou amostras, mesmo quando não havia intenção original de adquirir algo. A força desse mecanismo se explica porque, em contextos ancestrais, devolver favores aumentava a coesão do grupo e reduzia o risco de exclusão social.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>Reciprocidade não é apenas sobre objetos; também envolve atenção, informação, introduções e tempo. O cérebro registra “créditos” sociais difusos, e pessoas que recebem algo de valor tendem a aceitar pedidos subsequentes mesmo quando não há proporção objetiva entre o favor e a retribuição. Esse efeito é amplificado quando o benefício é percebido como personalizado e genuinamente útil, não como brinde genérico.</p>",
+      "<p>Quando a reciprocidade é autêntica, ela transforma estranhos em aliados; quando é calculada demais, transforma oportunidades em desconfiança.</p>"
+    ],
+    "triggerQuestion": "Construa sua estratégia de relacionamento oferecendo valor antes de pedir qualquer compromisso: conteúdos profundos, diagnósticos específicos, planilhas úteis e pequenos ajustes de graça têm impacto desproporcional. Faça isso com intenção limpa: ofereça algo que, por si só, já justificaria a interação, independentemente da venda. Ao mesmo tempo, proteja-se de tentativas de uso manipulativo da reciprocidade, reconhecendo quando brindes e favores são desenhados apenas para forçar decisões rápidas.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Um garçom que deixa um doce extra junto com a conta aumenta significativamente o valor médio das gorjetas.</li><li style='margin-bottom: 12px;'>Amostras grátis em supermercados elevam as vendas de produtos específicos, mesmo para clientes que não planejavam comprar aquele item.</li><li style='margin-bottom: 12px;'>Consultores que oferecem diagnósticos detalhados e úteis sem cobrar nada geram forte sensação de dívida psicológica em potenciais clientes.</li></ul>"
   },
   {
     "id": "aversao-a-perda",
@@ -55,10 +70,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Daniel Kahneman",
     "color": "#FFE66D",
     "icon": "◌",
-    "definition": "A dor de perder dinheiro dói o dobro do prazer de ganhá-lo.",
-    "detailedContent": [],
-    "triggerQuestion": "Reformule uma headline focando estritamente no que o cliente perde se não te contratar.",
-    "example": "O anúncio \"Veja o dinheiro que sua empresa queima ao ignorar a IA\" tem taxa de clique maior que \"Ganhe mais dinheiro com IA\"."
+    "definition": "Aversão à perda é a tendência humana de reagir mais intensamente a perdas do que a ganhos equivalentes. Isso distorce decisões de investimento, negociação e mudança, levando pessoas a preservar o status quo mesmo quando a alternativa é estatisticamente melhor.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“A dor de perder é psicologicamente duas vezes mais poderosa que o prazer de ganhar.” – Parafraseando Kahneman e Tversky*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>Aversão à perda é um dos pilares da Teoria da Perspectiva, modelo que descreve como as pessoas realmente tomam decisões sob risco, em contraste com a teoria clássica da utilidade esperada. Estudos mostram que, em muitos contextos, é necessário oferecer um ganho aproximadamente duas vezes maior que a perda para que pessoas considerem uma aposta aceitável. Além disso, indivíduos tendem a avaliar resultados relativamente a um ponto de referência (como seu estado atual), não em termos absolutos, o que reforça o medo de piorar.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>Do ponto de vista evolutivo, evitar perdas catastróficas – como fome ou exclusão – foi mais crítico para a sobrevivência do que capturar ganhos marginais. O cérebro, portanto, superdimensiona ameaças à situação atual, mesmo quando dados objetivos indicam que o risco é pequeno e o potencial de ganho é grande. Em negociações, a forma como uma proposta é enquadrada – em termos de perdas evitadas ou ganhos obtidos – influencia fortemente a aceitação.</p>",
+      "<p>Aversão à perda é excelente para evitar ruínas, mas péssima conselheira quando impede que você aceite riscos calculados que podem mudar estruturalmente seu jogo.</p>"
+    ],
+    "triggerQuestion": "Ao comunicar ofertas, destaque com honestidade o que o cliente perde se não agir: oportunidades desperdiçadas, erosão de competitividade ou manutenção de problemas caros. Nas próprias decisões, questione se o medo vem de uma perda real e grande ou apenas da desconfortável sensação de sair do conhecido. Reescreva apostas em termos de “quanto posso perder na pior hipótese?” e “isso é tolerável dado o potencial de ganho?”.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Investidores mantêm ações perdedoras por mais tempo do que deveriam, na esperança de “voltar ao zero”, e realizam lucros cedo demais em posições vencedoras.</li><li style='margin-bottom: 12px;'>Clientes preferem planos de assinatura estáveis a modelos com menor custo médio, mas risco de pagar mais em meses específicos.</li><li style='margin-bottom: 12px;'>Pessoas recusam propostas de mudança de cargo que oferecem crescimento de longo prazo, por medo de perder a segurança e o prestígio atuais.</li></ul>"
   },
   {
     "id": "vies-de-autoridade",
@@ -67,10 +87,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Estratégia Coletiva",
     "color": "#A78BFA",
     "icon": "⟁",
-    "definition": "A tendência humana de não questionar quem parece especialista.",
-    "detailedContent": [],
-    "triggerQuestion": "Remova o jargão técnico da sua próxima reunião e avalie se o cliente entende o valor real do seu serviço.",
-    "example": "O cliente aceita taxas ruins porque o gerente do banco está de terno e em uma sala de vidro."
+    "definition": "O viés de autoridade é a tendência de atribuir peso excessivo às opiniões de figuras percebidas como especialistas ou superiores hierárquicos. Ele economiza esforço cognitivo, mas expõe pessoas e organizações a aceitar recomendações ruins sem escrutínio.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Títulos, jalecos e ternos fazem mais por decisões do que dados, com mais frequência do que gostaríamos de admitir.”*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>Em ambientes complexos, confiar em especialistas é racional até certo ponto: ninguém consegue dominar todos os domínios relevantes para decisões contemporâneas. Contudo, experimentos clássicos em psicologia social mostram que símbolos de autoridade – como uniformes, linguagem técnica e contextos institucionais – geram obediência mesmo quando pedidos são obviamente questionáveis. Isso é agravado em culturas corporativas altamente hierárquicas, onde discordar de alguém “acima” é visto como desrespeito.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>O viés de autoridade funciona como atalho de confiança: se alguém passou por filtros de certificação ou ganhou status social, a probabilidade de estar certo é maior que a de um desconhecido qualquer. O problema surge quando esse atalho substitui completamente a avaliação de incentivos, histórico e evidências por trás do conselho recebido. Em sistemas complexos, especialistas também estão sujeitos a vieses, pressões comerciais e limitações de visão.</p>",
+      "<p>Autoridade legítima acelera decisões; autoridade incensada, sem questionamento, é atalho direto para erros caros abraçados com convicção.</p>"
+    ],
+    "triggerQuestion": "Mantenha o respeito por especialistas, mas trate qualquer recomendação como hipótese a ser testada contra seus objetivos, dados e contexto de risco. Em reuniões com clientes, reduza o uso de jargão técnico e incentive perguntas até que todos consigam explicar a decisão em linguagem simples. Internamente, crie culturas onde discordar com respeito – inclusive de líderes – é sinal de maturidade profissional.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Clientes aceitam produtos financeiros complexos de gerentes de banco sem compreender as taxas reais, confiando apenas na aparência profissional e no ambiente formal.</li><li style='margin-bottom: 12px;'>Times de tecnologia implementam arquiteturas arriscadas porque um “guru” do setor as defende em conferências, mesmo sem evidência robusta de adequação ao contexto da empresa.</li><li style='margin-bottom: 12px;'>Pacientes seguem prescrições médicas conflitantes sem pedir esclarecimentos, por receio de parecerem desrespeitosos com o especialista.</li></ul>"
   },
   {
     "id": "efeito-lollapalooza",
@@ -79,10 +104,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Charlie Munger",
     "color": "#F97316",
     "icon": "◎",
-    "definition": "Múltiplos vieses empurrando na mesma direção para gerar uma decisão extrema.",
-    "detailedContent": [],
-    "triggerQuestion": "Combine escassez (bônus some hoje) com prova social (x pessoas já compraram) na abertura do carrinho.",
-    "example": "Um leilão mistura escassez, urgência e prova social, forçando lances irracionais."
+    "definition": "Efeito lollapalooza é o nome dado ao fenômeno em que múltiplas forças psicológicas se alinham para produzir comportamentos extremos, como manias de mercado ou histerias coletivas. Entender esse acoplamento de vieses ajuda a identificar cenários em que o comportamento da multidão fica especialmente irracional.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Os maiores erros e os maiores acertos surgem quando vários vieses empurram na mesma direção.” – Charlie Munger*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>Munger observou que raramente grandes distorções surgem de um único viés isolado; em vez disso, combinações de prova social, incentivos, escassez, reciprocidade e aversão à perda criam empurrões cumulativos. Em leilões, por exemplo, competição aberta, tempo limitado e status associado à vitória se combinam para levar participantes a pagar acima do valor intrínseco do item. Em mercados financeiros, ciclos de euforia e pânico são, em grande parte, manifestações de lollapalooza em escala coletiva.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>O lollapalooza não é apenas a soma de vieses, mas uma mudança de fase no sistema: depois de certo ponto, cada novo estímulo reforça a narrativa dominante, reduzindo drasticamente o pensamento crítico. As pessoas deixam de avaliar a oferta em si e passam a decidir com base em sinais sociais e emocionais, como “todos que admiro estão dentro” ou “se eu ficar de fora, vou me arrepender para sempre”. Identificar esses contextos exige observar não só o conteúdo das mensagens, mas também o clima emocional e a arquitetura do ambiente.</p>",
+      "<p>O efeito lollapalooza é o que cria tanto irracionalidades perigosas quanto oportunidades únicas – a diferença está em reconhecer quando a maré emocional substituiu a análise lúcida.</p>"
+    ],
+    "triggerQuestion": "Ao estruturar lançamentos e ofertas, é possível combinar elementos como prova social, escassez e clareza de incentivos de forma ética, reforçando uma proposta que de fato gera valor sustentado para o cliente. Por outro lado, ao se ver diante de decisões altamente emocionais e massificadas, convém parar e listar quais vieses estão simultaneamente ativos, para ganhar distância da pressão do momento. Perguntas como “eu compraria isso se não houvesse contagem regressiva ou exposição pública?” ajudam a quebrar o transe.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Lançamentos de produtos com filas físicas, cobertura de mídia, bônus limitados e forte presença de influenciadores, criando sensação de que “só um louco ficaria de fora”.</li><li style='margin-bottom: 12px;'>Bolhas especulativas em ativos digitais, alimentadas por histórias de enriquecimento rápido, comunidades online intensas e medo de perder a oportunidade.</li><li style='margin-bottom: 12px;'>Campanhas virais em que urgência, contagem regressiva, depoimentos em massa e incentivos financeiros convergem para decisões aceleradas.</li></ul>"
   },
   {
     "id": "vies-de-confirmacao",
@@ -91,10 +121,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Estratégia Coletiva",
     "color": "#38BDF8",
     "icon": "⟋",
-    "definition": "Buscar apenas informações que confirmem aquilo que você já decidiu acreditar.",
-    "detailedContent": [],
-    "triggerQuestion": "Liste agora 3 motivos sólidos pelos quais seu principal projeto atual pode fracassar.",
-    "example": "O trader que só lê fóruns otimistas sobre a moeda que comprou e ignora os sinais gráficos de queda."
+    "definition": "Viés de confirmação é a tendência de buscar, interpretar e lembrar informações que reforcem crenças que já temos, ignorando dados que as contradizem. Isso afeta cientistas, empreendedores e investidores, distorcendo análises e mantendo projetos mortos-vivos.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“O que a mente humana faz melhor é distorcer novas informações até que elas se encaixem em conclusões pré-existentes.”*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>Pesquisas em psicologia cognitiva mostram que, diante de evidências ambíguas, as pessoas sistematicamente preferem interpretações que preservam suas hipóteses originais. Em experimentos como a tarefa de seleção de Wason, participantes tendem a escolher testes que possam confirmar uma regra proposta, em vez de buscar cenários que a refutem. Esse comportamento é eficiente para proteger a autoimagem, mas ruim para descobrir a verdade.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>O viés de confirmação é reforçado por mecanismos modernos de filtragem, como algoritmos de recomendação que servem mais do que você já consome. Em comunidades online homogêneas, opiniões divergentes são rapidamente expulsas ou ridicularizadas, o que cria câmaras de eco onde cada novo dado é reinterpretado como prova adicional da narrativa dominante. O modelo mental alerta que a simples sensação de que “todo mundo inteligente concorda comigo” pode ser artefato de seleção, não evidência objetiva.</p>",
+      "<p>O viés de confirmação não apenas nos impede de ver erros; ele também nos rouba oportunidades que só seriam visíveis se tivéssemos coragem de abandonar narrativas confortáveis.</p>"
+    ],
+    "triggerQuestion": "Deliberadamente, crie o hábito de buscar a melhor crítica à sua tese atual, seja ela um produto, uma estratégia ou uma visão de mercado. Em decisões importantes, formalize um momento de “ataque à ideia”, pedindo a alguém de fora do projeto que a destrua com argumentos. Use checklists que incluam explicitamente a pergunta: “Que evidência me faria mudar de ideia – e ela já existe?”.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Um empreendedor lê apenas relatos de sucesso de modelos de assinatura e ignora estudos sobre taxas de churn altas em determinados nichos.</li><li style='margin-bottom: 12px;'>Um investidor acompanha fóruns otimistas sobre um ativo que já comprou, filtrando qualquer análise crítica como “FUD”.</li><li style='margin-bottom: 12px;'>Um time de produto descarta feedbacks negativos iniciais de usuários como “casos isolados”, prolongando a vida de uma solução que não encaixa no mercado.</li></ul>"
   },
   {
     "id": "vies-de-disponibilidade",
@@ -103,10 +138,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Estratégia Coletiva",
     "color": "#E879F9",
     "icon": "⊘",
-    "definition": "Acreditar que algo é frequente ou provável só porque é fácil de lembrar.",
-    "detailedContent": [],
-    "triggerQuestion": "Busque os números reais do mercado (taxa média de conversão do nicho) em vez de focar nos prints de gurus.",
-    "example": "Achar que todo negócio digital fatura milhões rápido porque seu feed do Instagram só mostra os vencedores."
+    "definition": "Viés de disponibilidade é o atalho mental pelo qual julgamos a probabilidade de um evento pela facilidade com que lembramos de exemplos dele. Eventos recentes, emocionais ou muito divulgados parecem comuns, mesmo que sejam estatisticamente raros.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“O que vem fácil à mente parece mais frequente do que realmente é.”*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>A mente humana tem capacidade limitada de processamento e memória; por isso, usa a facilidade de lembrança como proxy para frequência e relevância. Pesquisas mostram que pessoas superestimam a incidência de crimes violentos logo após notícias sensacionalistas e subestimam riscos menos visíveis, porém mais prováveis, como doenças crônicas. Em negócios, histórias de sucesso extremo circulam muito mais do que a massa de casos medianos, criando percepção distorcida do que é normal.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>O viés de disponibilidade é reforçado por mídia e redes sociais que competem por atenção com conteúdo emocionalmente carregado, não proporcional à relevância estatística. Como a memória se organiza em torno de experiências vívidas, o cérebro usa esses poucos exemplos marcantes como base para generalizações amplas. Sem dados agregados, a intuição fica enviesada por episódios isolados.</p>",
+      "<p>Quando você deixa o cérebro trabalhar só com o que lembra fácil, passa a dirigir olhando apenas para os últimos segundos do filme – e não para o filme inteiro.</p>"
+    ],
+    "triggerQuestion": "Antes de tomar decisões importantes com base em “impressões”, busque números: taxas médias de conversão, tempos de ciclo, distribuições de resultados. Ao consumir notícias e conteúdo, pergunte se aquele caso é representativo ou apenas outlier transformado em narrativa. Em gerenciamento de risco, complemente a percepção intuitiva com análises de base histórica mais ampla.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Empreendedores passam a acreditar que “todo mundo está ficando rico rápido com lançamentos digitais” porque o feed só mostra casos excepcionais.</li><li style='margin-bottom: 12px;'>Após um bug grave noticiado amplamente, clientes exigem mudanças urgentes em segurança, mesmo que a probabilidade daquele ataque específico seja baixa comparada a outras vulnerabilidades.</li><li style='margin-bottom: 12px;'>Gestores supervalorizam problemas que geraram crises públicas recentes e ignoram riscos silenciosos, porém estruturalmente mais perigosos.</li></ul>"
   },
   {
     "id": "inveja--envy",
@@ -115,10 +155,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Charlie Munger",
     "color": "#94A3B8",
     "icon": "◈",
-    "definition": "Para Munger, a inveja, não a ganância, é o motor oculto do mundo.",
-    "detailedContent": [],
-    "triggerQuestion": "Identifique a última compra cara que você fez apenas para impressionar outras pessoas.",
-    "example": "Pessoas trocam de carro para sinalizar status aos vizinhos, não por eficiência."
+    "definition": "Inveja é o desconforto gerado ao comparar-se negativamente com o sucesso ou status de outra pessoa. Embora raramente admitida, ela direciona consumo, carreira e decisões financeiras mais do que métricas objetivas de bem-estar.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Não é a ganância, é a inveja que move o mundo.” – Atribuído a Charlie Munger*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>A inveja se alimenta de comparações relativas: o que importa não é apenas o que se tem, mas o quanto isso se destaca – ou não – em relação ao grupo de referência. Estudos em economia comportamental indicam que indivíduos frequentemente preferem ganhar menos em termos absolutos se isso significar ganhar mais do que os pares imediatos. Em ambientes digitais, onde sinais de status são continuamente exibidos, esse mecanismo é amplificado.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>Da perspectiva evolutiva, acompanhar a posição relativa no grupo tinha importância direta para acesso a recursos e parceiros, o que explica a sensibilidade extrema a sinais de status. Hoje, essa sensibilidade é explorada por estratégias de marketing que associam produtos a estilos de vida aspiracionais, transformando consumo em teatro de superioridade simbólica. O modelo mental da inveja convida a enxergar essas dinâmicas com frieza, reduzindo sua influência sobre decisões estruturais.</p>",
+      "<p>A inveja é péssima conselheira: faz você ganhar um jogo de aparências enquanto perde o jogo da vida real.</p>"
+    ],
+    "triggerQuestion": "Ao avaliar grandes compras ou mudanças de carreira, pergunte explicitamente: “Isso melhora minha vida concreta ou apenas meu placar imaginário com outras pessoas?”. Reforce métricas internas de progresso – como domínio de habilidades, qualidade de relacionamentos e liberdade de tempo – em vez de usar apenas sinais externos. Em marketing, use a compreensão de status com responsabilidade, associando posicionamento a realizações genuínas, não a comparações vazias.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Pessoas trocam de carro ou smartphone não por necessidade funcional, mas para sinalizar pertencimento a um determinado grupo.</li><li style='margin-bottom: 12px;'>Profissionais recusam oportunidades interessantes em áreas menos glamourosas porque temem perder prestígio perante o círculo social.</li><li style='margin-bottom: 12px;'>Empreendedores priorizam projetos que rendem cases “instagramáveis”, mesmo quando iniciativas discretas poderiam gerar mais lucro real.</li></ul>"
   },
   {
     "id": "evitacao-de-inconsistencia",
@@ -127,10 +172,15 @@ export const wikiContent: WikiModel[] = [
     "thinker": "Estratégia Coletiva",
     "color": "#34D399",
     "icon": "⊛",
-    "definition": "A dificuldade extrema em mudar de ideia após assumir uma postura pública.",
-    "detailedContent": [],
-    "triggerQuestion": "Admita publicamente um erro ou tese errada sua para a equipe nesta semana.",
-    "example": "O empresário que continua queimando caixa num produto ruim porque foi ele quem teve a ideia."
+    "definition": "Evitação de inconsistência é a tendência de resistir a mudar de ideia depois de assumir uma postura de forma explícita, especialmente em público. O desejo de parecer coerente leva pessoas a manter compromissos ruins, mesmo quando novas evidências sugerem que deveriam recuar.",
+    "detailedContent": [
+      "<p style=\"font-style: italic; color: var(--amber-dim)\">*“Depois que tomamos posição em público, ficamos prisioneiros dela.”*</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Introdução e explicação</strong><p>A necessidade de consistência é um dos princípios mais estudados em persuasão: uma vez que alguém se compromete com uma afirmação ou ação, cresce a probabilidade de continuar na mesma direção. Em nível psicológico, admitir erro ameaça a autoimagem e pode ser percebido como fraqueza perante o grupo, o que incentiva a racionalização de decisões passadas. Em organizações, isso se traduz em projetos que continuam recebendo recursos só porque alguém importante os patrocinou no início.</p>",
+      "<strong style=\"color: var(--off-white); display: block; margin-top: 16px; margin-bottom: 8px;\">Nova explicação para reforço</strong><p>Evitação de inconsistência é, em parte, resultado de um mecanismo saudável: buscar coerência interna entre crenças e ações reduz conflito cognitivo. Porém, quando combinado com ego e exposição pública, transforma-se em prisão mental que impede ajustes de rota necessários. A cultura de punir quem muda de opinião, em vez de valorizar revisão baseada em novas evidências, agrava o problema.</p>",
+      "<p>A verdadeira consistência valiosa não é insistir no erro, mas manter um compromisso inegociável com a realidade conforme ela se revela.</p>"
+    ],
+    "triggerQuestion": "Crie rituais explícitos para revisão de decisões, onde mudar de ideia seja visto como sinal de aprendizado, não de fraqueza. Ao defender uma tese, inclua desde o início condições de reversão: quais métricas, em qual prazo, fariam você abandonar o plano? Em comunicação externa, seja transparente sobre incertezas e hipóteses, reduzindo a pressão para parecer infalível.",
+    "example": "<ul style='padding-left: 20px; list-style-type: disc; margin-bottom: 0;'><li style='margin-bottom: 12px;'>Um executivo mantém um produto no portfólio apesar de vendas fracas, para evitar admitir que a aposta original foi equivocada.</li><li style='margin-bottom: 12px;'>Um investidor se recusa a vender um ativo claramente problemático porque já defendeu publicamente sua tese em redes sociais.</li><li style='margin-bottom: 12px;'>Equipes evitam propor mudanças de rota estratégica para não desautorizar apresentações anteriores feitas à diretoria.</li></ul>"
   },
   {
     "id": "inversao",

@@ -45,14 +45,10 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
           fontSize: "18px", color: "var(--gray-text)", lineHeight: 1.8, 
           fontFamily: "var(--serif)", paddingBottom: "48px" 
         }}>
-          <p style={{ color: "var(--off-white)", fontSize: "22px", marginBottom: "48px" }}>
-            {model.definition}
-          </p>
+          <div style={{ color: "var(--off-white)", fontSize: "22px", marginBottom: "48px" }} dangerouslySetInnerHTML={{ __html: model.definition }}></div>
 
           {model.detailedContent && model.detailedContent.map((paragraph, index) => (
-            <p key={index} style={{ marginBottom: "28px", textAlign: "justify" }}>
-              {paragraph}
-            </p>
+            <div key={index} style={{ marginBottom: "28px", textAlign: "justify" }} dangerouslySetInnerHTML={{ __html: paragraph }}></div>
           ))}
 
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "var(--off-white)", marginBottom: "24px", paddingTop: "32px", borderTop: "1px solid var(--amber-dim)" }}>
@@ -71,9 +67,7 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
             }}>
               Exercício Tático
             </div>
-            <p style={{ fontFamily: "var(--serif)", fontSize: "1.8rem", color: "var(--off-white)", margin: 0, fontStyle: "italic", lineHeight: 1.4 }}>
-              "{model.triggerQuestion}"
-            </p>
+            <div style={{ fontFamily: "var(--serif)", fontSize: "1.8rem", color: "var(--off-white)", margin: 0, fontStyle: "italic", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: `"${model.triggerQuestion}"` }}></div>
           </div>
 
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "var(--off-white)", marginBottom: "24px", paddingTop: "32px", borderTop: "1px solid var(--amber-dim)" }}>
@@ -83,9 +77,7 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
             <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--gray-text)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px" }}>
               Arquivo // Acesso Histórico
             </div>
-            <p style={{ margin: 0 }}>
-              {model.example}
-            </p>
+            <div style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: model.example }}></div>
           </div>
 
         </div>
