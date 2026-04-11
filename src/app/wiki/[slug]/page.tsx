@@ -69,7 +69,7 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
               fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.15em", 
               textTransform: "uppercase", color: model.color, marginBottom: "24px" 
             }}>
-              Pergunta-Gatilho Operacional
+              Exercício Tático
             </div>
             <p style={{ fontFamily: "var(--serif)", fontSize: "1.8rem", color: "var(--off-white)", margin: 0, fontStyle: "italic", lineHeight: 1.4 }}>
               "{model.triggerQuestion}"
