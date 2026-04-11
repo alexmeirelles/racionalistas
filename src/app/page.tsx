@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import iconPic from "./icon.png";
+import { Header } from "../components/Header";
 
 export default function Home() {
   return (
@@ -8,21 +9,7 @@ export default function Home() {
 
 
   {/* NAV */}
-  <nav>
-    <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
-        <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
-        <span>Racionalistas<span>.</span></span>
-      </div>
-    </Link>
-    <div className="nav-links">
-      <a href="#manifesto" className="nav-link">Manifesto</a>
-      <a href="/wiki" className="nav-link">Wiki</a>
-      <a href="/forum" className="nav-link">Fórum</a>
-      <a href="#oktal" className="nav-link">Oktal</a>
-      <a href="#assinar" className="nav-cta">Assinar grátis</a>
-    </div>
-  </nav>
+  <Header />
 
   {/* HERO */}
   <div className="hero">
