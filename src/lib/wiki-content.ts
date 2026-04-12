@@ -11,7 +11,7 @@ export interface WikiModel {
   example: string;
 }
 
-export const wikiContent: WikiModel[
+export const wikiContent: WikiModel[] = [
   {
     "id": "inversao",
     "slug": "inversao",
