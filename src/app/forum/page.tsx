@@ -1,5 +1,19 @@
 import { Header } from "../../components/Header";
 import Link from 'next/link';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fórum Racionalista — Diálogos para Escalar o Pensamento",
+  description: "Fórum de discussão sobre modelos mentais, vieses cognitivos e estratégia para founders. Troca de teses, dissecação de frameworks e depuração de vieses na arquitetura de negócios.",
+  alternates: {
+    canonical: "https://www.racionalistas.com.br/forum",
+  },
+  openGraph: {
+    title: "Fórum Racionalista — Diálogos para Escalar o Pensamento",
+    description: "A praça pública dos construtores racionais. Discussões sobre modelos mentais, vieses cognitivos e estratégia para founders.",
+    url: "https://www.racionalistas.com.br/forum",
+  },
+};
 
 // Mockup data inspired by LessWrong's sophisticated intellectual curation
 const FILTERS = ["Curadoria", "Página Inicial", "Discussões Recentes", "Debates em Alta", "Meta"];

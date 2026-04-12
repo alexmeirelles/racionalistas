@@ -4,8 +4,53 @@ import Link from 'next/link';
 import Image from "next/image";
 import iconPic from "../../icon.png";
 import { Header } from "../../../components/Header";
+import type { Metadata } from "next";
 
-export default async function WikiArticle({ params }: { params: Promise<{ slug: string }> }) {
+const SITE_URL = "https://www.racionalistas.com.br";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const model = wikiContent.find(m => m.slug === resolvedParams.slug);
+
+  if (!model) {
+    return {
+      title: "Modelo não encontrado",
+    };
+  }
+
+  const title = `${model.name} — Modelo Mental | Racionalistas`;
+  const description = model.definition.length > 155
+    ? model.definition.substring(0, 152) + "..."
+    : model.definition;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${SITE_URL}/wiki/${model.slug}`,
+    },
+    openGraph: {
+      title: `${model.name} — Modelo Mental`,
+      description,
+      url: `${SITE_URL}/wiki/${model.slug}`,
+      type: "article",
+      publishedTime: "2026-04-01T00:00:00Z",
+      authors: ["Alexandre Meirelles"],
+      tags: ["modelo mental", model.name, model.thinker, "racionalidade", "tomada de decisão"],
+    },
+    twitter: {
+      card: "summary",
+      title: `${model.name} — Modelo Mental`,
+      description,
+    },
+  };
+}
+
+export default async function WikiArticle({ params }: Props) {
   const resolvedParams = await params;
   const model = wikiContent.find(m => m.slug === resolvedParams.slug);
 
@@ -13,32 +58,103 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  // JSON-LD Article structured data for this specific mental model
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: model.name,
+    description: model.definition,
+    author: {
+      "@type": "Person",
+      name: "Alexandre Meirelles",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Racionalistas",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/wiki/${model.slug}`,
+    },
+    datePublished: "2026-04-01T00:00:00Z",
+    dateModified: new Date().toISOString(),
+    inLanguage: "pt-BR",
+    keywords: `${model.name}, ${model.thinker}, modelo mental, racionalidade, tomada de decisão`,
+    about: {
+      "@type": "DefinedTerm",
+      name: model.name,
+      description: model.definition,
+    },
+  };
+
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Racionalistas",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Wiki",
+        item: `${SITE_URL}/wiki`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: model.name,
+        item: `${SITE_URL}/wiki/${model.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <Header />
 
-      <section style={{ paddingTop: "140px", maxWidth: "900px", margin: "0 auto" }}>
+      <article style={{ paddingTop: "140px", maxWidth: "900px", margin: "0 auto" }}>
         
-        {/* CABEÇALHO DO ARTIGO */}
-        <div style={{ marginBottom: "64px" }}>
+        {/* BREADCRUMB NAV */}
+        <nav aria-label="Breadcrumb" style={{ marginBottom: "24px" }}>
           <Link href="/wiki" style={{ 
             fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.15em", 
             textTransform: "uppercase", color: "var(--gray-text)", textDecoration: "none",
-            marginBottom: "24px", display: "inline-block" 
+            display: "inline-block" 
           }}>
             ← Voltar para o Catálogo
           </Link>
-          
+        </nav>
+
+        {/* CABEÇALHO DO ARTIGO */}
+        <header style={{ marginBottom: "64px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "16px" }}>
-            <span style={{ color: model.color, fontSize: "2rem" }}>{model.icon}</span>
+            <span style={{ color: model.color, fontSize: "2rem" }} aria-hidden="true">{model.icon}</span>
             <div className="section-tag" style={{ margin: 0, color: model.color }}>{model.thinker}</div>
           </div>
           
           <h1 className="section-title" style={{ maxWidth: "100%", marginBottom: "24px" }}>
             {model.name}
           </h1>
-          
-        </div>
+        </header>
 
         {/* CORPO DO TEXTO */}
         <div style={{ 
@@ -81,7 +197,7 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
           </div>
 
         </div>
-      </section>
+      </article>
 
       <div className="divider"><hr /></div>
 

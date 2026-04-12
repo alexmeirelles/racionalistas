@@ -3,6 +3,20 @@ import Link from 'next/link';
 import Image from "next/image";
 import iconPic from "../icon.png";
 import { Header } from "../../components/Header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wiki de Modelos Mentais — 40 Frameworks de Decisão Documentados",
+  description: "Enciclopédia completa com 40 modelos mentais de alto impacto: Inversão, Primeiros Princípios, Viés de Confirmação, Efeitos de Rede, Juros Compostos e mais. Cada modelo com definição, exemplos práticos e caso de estudo comprovado.",
+  alternates: {
+    canonical: "https://www.racionalistas.com.br/wiki",
+  },
+  openGraph: {
+    title: "Wiki de Modelos Mentais — 40 Frameworks de Decisão",
+    description: "Enciclopédia completa com 40 modelos mentais de alto impacto para founders e estrategistas. Definição, exemplos práticos e caso de estudo comprovado.",
+    url: "https://www.racionalistas.com.br/wiki",
+  },
+};
 
 export default function WikiIndex() {
   const sortedContent = [...wikiContent].sort((a,b) => a.name.localeCompare(b.name));
