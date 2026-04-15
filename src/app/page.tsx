@@ -38,18 +38,6 @@ export default function Home() {
 
   <div className="divider"><hr /></div>
 
-  {/* QUOTE SECTION */}
-  <section style={{ textAlign: "center", padding: "3rem 1rem", maxWidth: "700px", margin: "0 auto" }}>
-    <p style={{ fontSize: "1.6rem", fontStyle: "italic", color: "var(--gray-text)", lineHeight: 1.4, margin: "0 0 1rem 0" }}>
-      &quot;Decisões difíceis tornam a vida fácil. Decisões fáceis tornam a vida difícil.&quot;
-    </p>
-    <div style={{ fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "2px", opacity: 0.5 }}>
-      — Jerzy Gregorek
-    </div>
-  </section>
-
-  <div className="divider"><hr /></div>
-
   {/* MANIFESTO */}
   <section className="manifesto" id="manifesto">
     <div className="section-tag">Manifesto</div>
