@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import iconPic from "../app/icon.png";
 import { useState } from "react";
+import { ProfileBubble } from "./ProfileBubble";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,9 @@ export function Header() {
           <span>Racionalistas<span>.</span></span>
         </div>
       </Link>
-      
-      <button 
-        className="mobile-menu-btn" 
+
+      <button
+        className="mobile-menu-btn"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Abrir menu"
       >
@@ -31,6 +32,7 @@ export function Header() {
         <Link href="/forum" className="nav-link" onClick={() => setIsOpen(false)}>Fórum</Link>
         <Link href="/#oktal" className="nav-link" onClick={() => setIsOpen(false)}>Oktal</Link>
         <Link href="/#assinar" className="nav-cta" onClick={() => setIsOpen(false)}>Assinar grátis</Link>
+        <ProfileBubble />
       </div>
     </nav>
   );
