@@ -5,13 +5,13 @@ import { Header } from "../components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Racionalistas — Para quem recusa decidir no piloto automático",
+  title: "Racionalistas — Um Culto à sua Inteligência",
   description: "Modelos mentais, vieses cognitivos e frameworks de decisão para founders e solopreneurs. Conteúdo semanal gratuito sobre pensamento estratégico, inversão, primeiros princípios e mais de 40 modelos mentais documentados.",
   alternates: {
     canonical: "https://www.racionalistas.com.br",
   },
   openGraph: {
-    title: "Racionalistas — Para quem recusa decidir no piloto automático",
+    title: "Racionalistas — Um Culto à sua Inteligência",
     description: "Modelos mentais, vieses cognitivos e frameworks de decisão. Conteúdo semanal para founders que levam pensamento estruturado a sério.",
     url: "https://www.racionalistas.com.br",
   },

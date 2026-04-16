@@ -9,7 +9,7 @@ const SITE_DESCRIPTION = "Modelos mentais, vieses cognitivos e frameworks de dec
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Racionalistas — Para quem recusa decidir no piloto automático",
+    default: "Racionalistas — Um Culto à sua Inteligência",
     template: "%s | Racionalistas",
   },
   description: SITE_DESCRIPTION,
@@ -42,20 +42,20 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Racionalistas — Para quem recusa decidir no piloto automático",
+    title: "Racionalistas — Um Culto à sua Inteligência",
     description: SITE_DESCRIPTION,
     images: [
       {
         url: `${SITE_URL}/icon.png`,
         width: 512,
         height: 512,
-        alt: "Racionalistas — Pensamento claro é infraestrutura",
+        alt: "Racionalistas — Um Culto à sua Inteligência",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Racionalistas — Para quem recusa decidir no piloto automático",
+    title: "Racionalistas — Um Culto à sua Inteligência",
     description: SITE_DESCRIPTION,
     images: [`${SITE_URL}/icon.png`],
   },
