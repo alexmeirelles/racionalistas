@@ -4,7 +4,7 @@ import { ParticleBG } from "../components/ParticleBG";
 
 const SITE_URL = "https://www.racionalistas.com.br";
 const SITE_NAME = "Racionalistas";
-const SITE_DESCRIPTION = "Modelos mentais, vieses cognitivos e frameworks de decisão para founders e solopreneurs que levam pensamento estratégico a sério. Conteúdo semanal gratuito.";
+const SITE_DESCRIPTION = "Você não pensa como a maioria. Não consuma conteúdo como ela. Modelos mentais, vieses e frameworks para mentes fora do padrão.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

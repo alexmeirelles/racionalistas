@@ -6,13 +6,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Racionalistas — Um Culto à sua Inteligência",
-  description: "Modelos mentais, vieses cognitivos e frameworks de decisão para founders e solopreneurs. Conteúdo semanal gratuito sobre pensamento estratégico, inversão, primeiros princípios e mais de 40 modelos mentais documentados.",
+  description: "Você não pensa como a maioria. Não consuma conteúdo como ela. Modelos mentais, vieses e frameworks para mentes fora do padrão.",
   alternates: {
     canonical: "https://www.racionalistas.com.br",
   },
   openGraph: {
     title: "Racionalistas — Um Culto à sua Inteligência",
-    description: "Modelos mentais, vieses cognitivos e frameworks de decisão. Conteúdo semanal para founders que levam pensamento estruturado a sério.",
+    description: "Você não pensa como a maioria. Não consuma conteúdo como ela. Modelos mentais, vieses e frameworks para mentes fora do padrão.",
     url: "https://www.racionalistas.com.br",
   },
 };
