@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/icon.png`,
-        width: 512,
-        height: 512,
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
         alt: "Racionalistas — Um Culto à sua Inteligência",
       },
     ],
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Racionalistas — Um Culto à sua Inteligência",
     description: SITE_DESCRIPTION,
-    images: [`${SITE_URL}/icon.png`],
+    images: [`${SITE_URL}/og-image.png`],
   },
 };
 

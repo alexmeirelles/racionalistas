@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: "Racionalistas — Um Culto à sua Inteligência",
     description: "Você não pensa como a maioria. Não consuma conteúdo como ela. Modelos mentais, vieses e frameworks para mentes fora do padrão.",
     url: "https://www.racionalistas.com.br",
+    images: [{ url: "https://www.racionalistas.com.br/og-image.png", width: 1200, height: 630 }],
   },
 };
 
