@@ -45,6 +45,7 @@ export function ProfileBubble() {
   const [profile, setProfile] = useState<ProfileData>(DEFAULT_PROFILE);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [dropdownAlign, setDropdownAlign] = useState<"right" | "left">("right");
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -119,7 +120,14 @@ export function ProfileBubble() {
     <div style={{ position: "relative", flexShrink: 0 }} ref={panelRef}>
       {/* Avatar bubble */}
       <button
-        onClick={() => (isLoggedIn ? setOpen((v) => !v) : router.push("/login"))}
+        onClick={() => {
+          if (!isLoggedIn) { router.push("/login"); return; }
+          if (!open && panelRef.current) {
+            const rect = panelRef.current.getBoundingClientRect();
+            setDropdownAlign(rect.left < 260 ? "left" : "right");
+          }
+          setOpen((v) => !v);
+        }}
         title="Perfil"
         style={{
           width: 32,
@@ -158,7 +166,7 @@ export function ProfileBubble() {
           style={{
             position: "absolute",
             top: "calc(100% + 12px)",
-            right: 0,
+            ...(dropdownAlign === "right" ? { right: 0 } : { left: 0 }),
             width: 260,
             background: "rgba(20,20,20,0.97)",
             border: "1px solid rgba(200,169,126,0.12)",
