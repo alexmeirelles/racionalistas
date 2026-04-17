@@ -3,12 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import iconPic from "../app/icon.png";
-import { useState } from "react";
 import { ProfileBubble } from "./ProfileBubble";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <nav>
       <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -18,22 +15,15 @@ export function Header() {
         </div>
       </Link>
 
-      <button
-        className="mobile-menu-btn"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Abrir menu"
-      >
-        {isOpen ? '✕' : '☰'}
-      </button>
-
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <Link href="/#manifesto" className="nav-link" onClick={() => setIsOpen(false)}>Manifesto</Link>
-        <Link href="/wiki" className="nav-link" onClick={() => setIsOpen(false)}>Wiki</Link>
-        <Link href="/forum" className="nav-link" onClick={() => setIsOpen(false)}>Fórum</Link>
-        <Link href="/#oktal" className="nav-link" onClick={() => setIsOpen(false)}>Oktal</Link>
-        <Link href="/#assinar" className="nav-cta" onClick={() => setIsOpen(false)}>Assinar grátis</Link>
-        <ProfileBubble />
+      <div className="nav-links">
+        <Link href="/#manifesto" className="nav-link">Manifesto</Link>
+        <Link href="/wiki" className="nav-link">Wiki</Link>
+        <Link href="/forum" className="nav-link">Fórum</Link>
+        <Link href="/#oktal" className="nav-link">Oktal</Link>
+        <Link href="/#assinar" className="nav-cta">Assinar grátis</Link>
       </div>
+
+      <ProfileBubble />
     </nav>
   );
 }
