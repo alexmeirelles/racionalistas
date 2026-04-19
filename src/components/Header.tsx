@@ -10,7 +10,7 @@ export function Header() {
     <nav>
       <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
-          <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "brightness(0) invert(1)" }} />
+          <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "grayscale(1) brightness(5)" }} />
           <span>Racionalistas<span>.</span></span>
         </div>
       </Link>
