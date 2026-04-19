@@ -167,3 +167,11 @@ Chore · 101 arquivo(s): core-config.yaml config-cache.js config-loader.js build
 ## 19 abr, 15:26
 📄 **initialize work-log with project history** `878467d`
 Docs · 0 arquivo(s): 
+
+## 19 Apr, 16:28
+🟣 **move nav links into ProfileBubble dropdown on mobile** `918dad4`
+Novo · 2 arquivo(s): globals.css ProfileBubble.tsx
+
+## 19 Apr, 16:29
+🔴 **show icon as white-on-black instead of white square** `9aaf44b`
+Corrigido · 1 arquivo(s): Header.tsx
