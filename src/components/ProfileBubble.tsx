@@ -290,6 +290,37 @@ export function ProfileBubble() {
             </div>
           )}
 
+          {/* Nav links */}
+          <div style={{ padding: "8px 16px", borderBottom: "1px solid rgba(200,169,126,0.08)", display: "flex", flexDirection: "column", gap: 2 }}>
+            {[
+              { href: "/#manifesto", label: "Manifesto" },
+              { href: "/wiki",       label: "Wiki" },
+              { href: "/forum",      label: "Fórum" },
+              { href: "/#oktal",     label: "Oktal" },
+              { href: "/#assinar",   label: "Assinar grátis" },
+            ].map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                style={{
+                  fontSize: 12,
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: "var(--gray-text)",
+                  textDecoration: "none",
+                  padding: "6px 4px",
+                  transition: "color 0.2s",
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--off-white)")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--gray-text)")}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+
           {/* Footer */}
           <div style={{ padding: "10px 16px", display: "flex", justifyContent: "space-between" }}>
             <a
