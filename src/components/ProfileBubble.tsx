@@ -293,7 +293,6 @@ export function ProfileBubble() {
           {/* Nav links */}
           <div style={{ padding: "8px 16px", borderBottom: "1px solid rgba(200,169,126,0.08)", display: "flex", flexDirection: "column", gap: 2 }}>
             {[
-              { href: "/#manifesto", label: "Manifesto" },
               { href: "/wiki",       label: "Wiki" },
               { href: "/forum",      label: "Fórum" },
               { href: "/#oktal",     label: "Oktal" },

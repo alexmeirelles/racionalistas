@@ -15,15 +15,15 @@ export function Header() {
         </div>
       </Link>
 
-      <div className="nav-links">
-        <Link href="/#manifesto" className="nav-link">Manifesto</Link>
-        <Link href="/wiki" className="nav-link">Wiki</Link>
-        <Link href="/forum" className="nav-link">Fórum</Link>
-        <Link href="/#oktal" className="nav-link">Oktal</Link>
-        <Link href="/#assinar" className="nav-cta">Assinar grátis</Link>
+      <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+        <div className="nav-links">
+          <Link href="/wiki" className="nav-link">Wiki</Link>
+          <Link href="/forum" className="nav-link">Fórum</Link>
+          <Link href="/#oktal" className="nav-link">Oktal</Link>
+          <Link href="/#assinar" className="nav-cta">Assinar grátis</Link>
+        </div>
+        <ProfileBubble />
       </div>
-
-      <ProfileBubble />
     </nav>
   );
 }
