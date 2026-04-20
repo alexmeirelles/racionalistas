@@ -175,3 +175,7 @@ Novo · 2 arquivo(s): globals.css ProfileBubble.tsx
 ## 19 Apr, 16:29
 🔴 **show icon as white-on-black instead of white square** `9aaf44b`
 Corrigido · 1 arquivo(s): Header.tsx
+
+## 20 Apr, 09:17
+🔴 **restore nav links on mobile, were hidden below 480px** `144f493`
+Corrigido · 1 arquivo(s): globals.css
