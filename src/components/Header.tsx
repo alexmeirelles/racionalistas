@@ -11,11 +11,11 @@ export function Header() {
       <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer" }}>
           <Image src={iconPic} alt="Racionalistas" width={24} height={24} style={{ filter: "grayscale(1) brightness(5)" }} />
-          <span>Racionalistas<span>.</span></span>
+          <span className="logo-text">Racionalistas<span>.</span></span>
         </div>
       </Link>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+      <div className="nav-right">
         <div className="nav-links">
           <Link href="/wiki" className="nav-link">Wiki</Link>
           <Link href="/forum" className="nav-link">Fórum</Link>
