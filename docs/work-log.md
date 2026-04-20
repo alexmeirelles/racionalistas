@@ -179,3 +179,7 @@ Corrigido · 1 arquivo(s): Header.tsx
 ## 20 Apr, 09:17
 🔴 **restore nav links on mobile, were hidden below 480px** `144f493`
 Corrigido · 1 arquivo(s): globals.css
+
+## 20 Apr, 10:09
+🔴 **group links + ProfileBubble on right, remove Manifesto link** `4fe5ed2`
+Corrigido · 2 arquivo(s): Header.tsx ProfileBubble.tsx
