@@ -183,3 +183,7 @@ Corrigido · 1 arquivo(s): globals.css
 ## 20 Apr, 10:09
 🔴 **group links + ProfileBubble on right, remove Manifesto link** `4fe5ed2`
 Corrigido · 2 arquivo(s): Header.tsx ProfileBubble.tsx
+
+## 20 Apr, 10:18
+🔴 **match Oktal mobile layout — hide logo text, spread links, remove CTA** `f04339e`
+Corrigido · 2 arquivo(s): globals.css Header.tsx
