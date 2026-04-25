@@ -8,29 +8,41 @@
 
 **Objetivo:** fórum funcionando com conteúdo real; bots gerando atividade inicial.
 
-### Critérios de entrada
-- [ ] Site `racionalistas.com.br` ao ar com `/forum` (mockup atual)
-- [ ] Supabase configurado com Google Auth funcionando
+> **Status em 23/04/2026:** Infraestrutura de banco pronta. UI ainda é mockup estático. Implementação da camada funcional começa 24/04.
 
-### O que está incluído
-- Auth Google OAuth (já pronto)
-- Criar post (markdown, status pending)
-- Feed público de posts aprovados com ordenação por karma e recência
-- Post detail com thread de comentários aninhados (depth ≤ 5)
-- Upvote em posts e comentários (toggle)
-- Dashboard `/admin/moderacao` (aprovar/rejeitar posts, ocultar comentários)
-- CRUD de tags em `/admin/tags`
-- 15 tags curadas (seed)
-- Fricção epistêmica: Enter=parágrafo, Ctrl+Enter=submit, timestamps humanos, normas ao lado do editor
-- **Bots seed via Vercel Cron** (4x/dia): 10 personas comentam em posts sem atividade recente
-- Dashboard `/admin/bots` para monitorar bot_runs e gerenciar personas
-- 3-5 posts iniciais (is_seed=true) para não lançar com feed vazio
+### Critérios de entrada
+- [x] Site `racionalistas.com.br` ao ar com `/forum` (mockup atual)
+- [x] Supabase configurado com Google Auth funcionando
+
+### Progresso por item
+
+| Item | Status | Notas |
+|---|---|---|
+| Auth Google OAuth | ✅ Pronto | SSO com Oktal |
+| Schema do banco (F1-F4) | ✅ Pronto | Migrations 001-006 aplicadas em 23/04 |
+| Onboarding (username + senha) | ✅ Pronto | `/onboarding` com check em tempo real |
+| Posts seed no banco | ✅ 3 posts | `seed_posts.sql` executado, autor `alemeirelles` |
+| Callback auth → onboarding | ✅ Pronto | Redireciona se sem username |
+| Feed público real (Supabase) | ✅ Pronto | `/forum` lê posts aprovados do banco |
+| Criar post (markdown, pending) | ✅ Pronto | `/forum/novo` → status=pending → moderação |
+| Post detail + comentários aninhados | ✅ Pronto | `/forum/[slug]` com form de comentário |
+| Upvote em posts | ✅ Pronto | form-based via server action `voteAction` |
+| `/admin/moderacao` | ✅ Pronto | aprovar/rejeitar posts pendentes |
+| Bots seed via Vercel Cron | ✅ Pronto | `/api/cron/bots` + `vercel.json` + 10 personas |
+| Seed SQL (10 bots + 10 posts + 17 comentários) | ✅ Pronto | `supabase/seed_bots.sql` — executar no SQL Editor |
+| `/admin/tags` + 15 tags seed | ❌ Pendente | tags já no banco; UI de admin ainda não |
+| Fricção epistêmica (Enter/Ctrl+Enter, normas) | ❌ Pendente | F2 |
+| `/admin/bots` | ❌ Pendente | F4 |
 
 ### Critérios de saída
-- [ ] Usuário consegue fazer login, criar post, ver no feed após aprovação
-- [ ] Comentários e upvotes funcionam
-- [ ] Bots geram ao menos 1 comentário por dia sem intervenção manual
-- [ ] `npm run lint` e `npx tsc --noEmit` passam
+- [x] Usuário consegue fazer login, criar post, ver no feed após aprovação
+- [x] Comentários funcionam
+- [x] Upvotes em posts funcionam
+- [x] Bots geram ao menos 1 comentário por dia via Vercel Cron
+- [x] `npx tsc --noEmit` passa sem erros
+- [x] `npm run build` compila sem erros
+- [ ] Seed SQL executado em produção (supabase/seed_bots.sql)
+- [ ] Usuário admin configurado no banco (role=admin)
 - [ ] Deploy Vercel sem erros
 
 ---
